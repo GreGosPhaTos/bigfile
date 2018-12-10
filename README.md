@@ -24,7 +24,7 @@ You can move to your executable path `sudo mv ./bigfile /usr/local/bin/` for a g
 
  - scan your home folder, looking for 700 MB files and more :
 
- `python ./bigfile.py --dir /home/me --fileSize 700`
+ `bigfile --dir /home/me --fileSize 700`
 
  will give :
 
@@ -35,7 +35,7 @@ You can move to your executable path `sudo mv ./bigfile /usr/local/bin/` for a g
 
  - output the files size :
 
- `python ./bigfile.py --dir /home/me --fileSize 700 --outputSize`
+ `bigfile --dir /home/me --fileSize 700 --outputSize`
 
  will give :
 
