@@ -11,7 +11,7 @@ Is a cli tool that helps find huge files on your file system
 
 ## Or Download the executable (Unix system)
 
-`wget -qO- https://raw.githubusercontent.com/GreGosPhaTos/bigfile/master/archives/v1_0_0.tar.gz | tar xvz`
+`wget -qO- https://raw.githubusercontent.com/GreGosPhaTos/bigfile/master/archives/latest.tar.gz | tar xvz`
 
 then
 

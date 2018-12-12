@@ -19,10 +19,14 @@ def printBigFileSize(fileSize, outputSize = False):
 def parseFolderTree(path, callback):
   for file in os.listdir(path):
     pathFile = os.path.join(path, file)
-    if os.path.isfile(pathFile):
-      callback(pathFile)
-    elif os.path.isdir(pathFile) and not os.path.islink(pathFile):
-      parseFolderTree(pathFile, callback)
+    try:
+      if os.path.isfile(pathFile):
+        callback(pathFile)
+      elif os.path.isdir(pathFile) and not os.path.islink(pathFile):
+        parseFolderTree(pathFile, callback)
+    except (IOError, OSError) as e:
+      print (e)
+      pass
 
 
 """
@@ -40,22 +44,6 @@ def fromMBToBytes(value):
 
 def fromBytesToMB(value):
   return value / 1024 / 1024
-
-def isNumber(s):
-  try:
-    float(s)
-    return True
-  except ValueError:
-    pass
-
-  try:
-    import unicodedata
-    unicodedata.numeric(s)
-    return True
-  except (TypeError, ValueError):
-    pass
-
-  return False
 
 """
 Entrypoint
@@ -97,6 +85,7 @@ def main(argv):
     print("Done!")
   except (KeyboardInterrupt, SystemExit):
     print("\nAborted ...\nBye!")
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])
