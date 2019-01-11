@@ -9,9 +9,16 @@ Is a cli tool that helps find huge files on your file system
 `python ./bigfile.py --help`
 
 
-## Or Download the executable (Unix system)
+## Or Download the executable 
 
-`wget -qO- https://raw.githubusercontent.com/GreGosPhaTos/bigfile/master/archives/latest.tar.gz | tar xvz`
+Mac Os:
+
+`wget -qO- https://raw.githubusercontent.com/GreGosPhaTos/bigfile/master/archives/macos/latest.tar.gz | tar xvz`
+
+Linux: 
+
+`wget -qO- https://raw.githubusercontent.com/GreGosPhaTos/bigfile/master/archives/linux/latest.tar.gz | tar xvz`
+
 
 then
 
